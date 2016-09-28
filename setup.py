@@ -11,9 +11,9 @@ setup(
     packages=find_packages(),
     platforms=['OS Independent'],
     install_requires=[
-        'Django>=1.7',
+        'Django>=1.8',
         'sqlparse',
-        'django-debug-toolbar==1.4',
+        'django-debug-toolbar==1.5',
         'aldryn-addons',
     ],
     include_package_data=True,
