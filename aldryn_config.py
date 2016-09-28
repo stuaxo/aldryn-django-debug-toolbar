@@ -30,5 +30,6 @@ class Form(forms.BaseForm):
             settings['DEBUG_TOOLBAR_CONFIG'] = {
                 'DEBUG_TOOLBAR_PATCH_SETTINGS': False,
                 'SHOW_TOOLBAR_CALLBACK': self._show_toolbar,
+                'DISABLE_GZIP': True,
             }
         return settings
