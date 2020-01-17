@@ -10,7 +10,7 @@ setup(
     author_email='joseph.melettukunnel@divio.ch',
     packages=find_packages(),
     platforms=['OS Independent'],
-    install_requires=["django-debug-toolbar==1.8"],
+    install_requires=["django-debug-toolbar==2.1"],
     include_package_data=True,
     zip_safe=False,
 )
