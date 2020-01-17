@@ -43,7 +43,13 @@ class Form(forms.BaseForm):
 
             settings["DEBUG_TOOLBAR_CONFIG"] = {"SHOW_TOOLBAR_CALLBACK": self._show_toolbar}
 
-            middleware = settings["MIDDLEWARE_CLASSES"]
+            if settings.get('MIDDLEWARE'):
+                # Django>=1.10
+                middleware = settings['MIDDLEWARE']
+            else:
+                # Django<1.10
+                middleware = settings['MIDDLEWARE_CLASSES']
+
             debug_toolbar_middleware = "debug_toolbar.middleware.DebugToolbarMiddleware"
             debug_toolbar_middleware_position = data["toolbar_middleware_position"]
 
